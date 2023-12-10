@@ -1,0 +1,31 @@
+---
+const urlImage =
+  "https://municipio-las-acequias.netlify.app/images/municipio-frente.jpg";
+const urlSite = "https://municipio-las-acequias.netlify.app/";
+const title = "Titulo del sitio";
+const description =
+  "Explora el portal oficial de la Municipalidad de Las Acequias.";
+const keywords = "Las Acequias, las acequias, municipalidad, municipio";
+const author = "Lautaro Della Mea"
+---
+
+<meta name="author" content={author} />
+<!-- Motor de búsqueda -->
+<meta name="image" content={urlImage} />
+<meta name="keywords" content={keywords} />
+<meta name="robots" content="index, follow" />
+<!-- Schema.org de Google -->
+<meta itemprop="image" content={urlImage} />
+<!-- Open Graph para Facebook, Pinterest & Linkedin -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={urlImage} />
+<meta property="og:url" content={urlSite} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={title} />
+<meta property="og:locale" content="es_ES" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={urlImage} />
