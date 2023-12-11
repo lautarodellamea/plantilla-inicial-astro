@@ -5,6 +5,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 import "../styles/global.css";
+import Separator from "../components/Separator.astro";
+import BtnWpp from "../components/BtnWpp.astro";
 
 interface Props {
   title: string;
@@ -22,18 +24,22 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<Fonts/>
+    <Fonts />
     <OpenGraph />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-	<Header/>
+    <Header />
+    <Separator />
     <slot />
-	<Footer/>
+    <BtnWpp/>
+    <Footer />
 
-	<script>
-		import "../scripts/menu.js";
-	  </script>
+    <script>
+      import "../scripts/menu.js";
+      import "../scripts/nav-scroll.js";
+  
+    </script>
   </body>
 </html>

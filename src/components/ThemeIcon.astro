@@ -21,9 +21,17 @@
   #themeToggle {
     border: 0;
     background: none;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    z-index: 1000;
+  }
+  #themeToggle:hover {
+    opacity: 0.7;
   }
   .sun {
-    fill: black;
+    fill: white;
   }
   .moon {
     fill: transparent;
@@ -33,7 +41,7 @@
     fill: transparent;
   }
   :global(.dark) .moon {
-    fill: white;
+    fill: black;
   }
 </style>
 
