@@ -1,0 +1,38 @@
+{
+    "dataSocial": {
+      "facebook": {
+        "nombre": "Facebook",
+        "url": "https://www.facebook.com/tuusuario"
+      },
+      "email": {
+        "nombre": "gmail",
+        "url": "usuario@gmail.com"
+      },
+      "twitter": {
+        "nombre": "Twitter",
+        "url": "https://twitter.com/tuusuario"
+      },
+      "instagram": {
+        "nombre": "Instagram",
+        "url": "https://www.instagram.com/tuusuario"
+      },
+      "linkedin": {
+        "nombre": "LinkedIn",
+        "url": "https://www.linkedin.com/in/tuusuario"
+      },
+      "youtube": {
+        "nombre": "YouTube",
+        "url": "https://www.youtube.com/c/tuusuario"
+      },
+      "telefono": {
+        "nombre": "Telefono",
+        "url": "+5493585106000"
+      },
+      "maps": {
+        "nombre": "mapa",
+        "url": "https://www.google.com.ar/maps/place/Las+Acequias,+C%C3%B3rdoba/@-33.2817796,-63.9870138,15z/data=!3m1!4b1!4m6!3m5!1s0x95ce133b9dcc9be5:0x6094c9ebd296e8f1!8m2!3d-33.2820333!4d-63.9754366!16s%2Fg%2F120p4_wm?entry=ttu"
+      }
+    }
+  }
+
+  
