@@ -1,0 +1,84 @@
+---
+// component import
+import PostHeader from "../components/PostHeader.astro";
+import CategoryCloud from "../components/CategoryCloud.astro";
+import MainLayout from "./MainLayout.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
+
+// util imports
+import { formatBlogPosts } from "../js/utils";
+
+const { frontmatter } = Astro.props;
+const { title, description, date, category, author, image } = frontmatter;
+
+const allPosts = await Astro.glob("../pages/blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+  sortByDate: false,
+});
+const relatedPosts = formattedPosts
+  .filter(
+    (post) =>
+      post.frontmatter.category.toLowerCase() === category.toLowerCase() &&
+      post.frontmatter.title !== title
+  )
+  .slice(0, 3);
+---
+
+<MainLayout
+  {title}
+  {description}
+  image={frontmatter.image}
+  {frontmatter}
+  robots={frontmatter.robots}
+>
+  <PostHeader {title} {description} {date} {category} {image} {author} />
+  <div class="container post-container">
+    <div>
+      <slot />
+    </div>
+    <div class="sidebar">
+      <aside class="">
+        <h4>Blog Categories</h4>
+        <CategoryCloud />
+      </aside>
+      {
+        relatedPosts.length > 0 && (
+          <aside>
+            <h4>Related Posts</h4>
+            <div class="related-posts">
+              <RelatedPosts {relatedPosts} />
+            </div>
+          </aside>
+        )
+      }
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .post-container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .related-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .post-container {
+      grid-template-columns: 1fr minmax(auto, 220px);
+      align-items: start;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+  }
+</style>

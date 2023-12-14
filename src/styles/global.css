@@ -2,8 +2,9 @@
   --font-family: "Lato", sans-serif;
   --white-color: #ffffff;
   --black-color: #000000;
-  --max-width: 1200px;
+  --max-width: 1400px;
   --margen-x: 0.5rem;
+  --box-shadow: 3px 4px 5px -2px #b5c0e2;
 }
 
 html {
@@ -22,9 +23,9 @@ html {
 }
 
 body {
-  background-color: var(--white-color);
+  background-color: #f5f6f9;
   color: var(--black-color);
-  line-height: 1.6;
+  /* line-height: 1.6; */
 }
 
 a {
@@ -71,8 +72,35 @@ h6 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  padding: 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.tag {
+  color: white;
+  background-color: black;
+  padding: 4px 10px;
+}
+
+.btn {
+  background-color: #3945c6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 /* Estilos para dispositivos móviles primero */
@@ -102,7 +130,7 @@ p {
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
